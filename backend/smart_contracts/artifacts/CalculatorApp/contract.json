@@ -1,0 +1,58 @@
+{
+    "name": "CalculatorApp",
+    "methods": [
+        {
+            "name": "add",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "number"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            },
+            "desc": "add value to the total"
+        },
+        {
+            "name": "subtract",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "number"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            },
+            "desc": "subtract value from the total"
+        },
+        {
+            "name": "multiply",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "number"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            },
+            "desc": "Multiply total with a number, return the result"
+        },
+        {
+            "name": "divide",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "number"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            },
+            "desc": "Divide total with a number, return the result"
+        }
+    ],
+    "networks": {}
+}

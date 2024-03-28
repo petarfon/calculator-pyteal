@@ -1,0 +1,52 @@
+{
+    "name": "hello_world",
+    "methods": [
+        {
+            "name": "hello",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "name"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "add",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "a"
+                },
+                {
+                    "type": "uint64",
+                    "name": "b"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            },
+            "desc": "Second: Returns the sum of two numbers"
+        },
+        {
+            "name": "subtract",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "a"
+                },
+                {
+                    "type": "uint64",
+                    "name": "b"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            },
+            "desc": "Second: Returns the difference between two numbers"
+        }
+    ],
+    "networks": {}
+}

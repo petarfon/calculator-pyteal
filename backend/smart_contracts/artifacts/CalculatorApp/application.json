@@ -1,0 +1,115 @@
+{
+    "hints": {
+        "add(uint64)uint64": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "subtract(uint64)uint64": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "multiply(uint64)uint64": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "divide(uint64)uint64": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        }
+    },
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMQpieXRlY2Jsb2NrIDB4NzQ2Zjc0NjE2YyAweDE1MWY3Yzc1CnR4biBOdW1BcHBBcmdzCmludGNfMCAvLyAwCj09CmJueiBtYWluX2wxMAp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweGZmOWE3M2Q2IC8vICJhZGQodWludDY0KXVpbnQ2NCIKPT0KYm56IG1haW5fbDkKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHgzYzQxMzQwMCAvLyAic3VidHJhY3QodWludDY0KXVpbnQ2NCIKPT0KYm56IG1haW5fbDgKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHgwOGYxYjA2NCAvLyAibXVsdGlwbHkodWludDY0KXVpbnQ2NCIKPT0KYm56IG1haW5fbDcKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHg4ZGVjNDQzNiAvLyAiZGl2aWRlKHVpbnQ2NCl1aW50NjQiCj09CmJueiBtYWluX2w2CmVycgptYWluX2w2Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIGRpdmlkZWNhc3Rlcl83CmludGNfMSAvLyAxCnJldHVybgptYWluX2w3Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIG11bHRpcGx5Y2FzdGVyXzYKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDg6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgc3VidHJhY3RjYXN0ZXJfNQppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sOToKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKY2FsbHN1YiBhZGRjYXN0ZXJfNAppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sMTA6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KYm56IG1haW5fbDEyCmVycgptYWluX2wxMjoKdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKPT0KYXNzZXJ0CmludGNfMSAvLyAxCnJldHVybgoKLy8gYWRkCmFkZF8wOgpwcm90byAxIDEKaW50Y18wIC8vIDAKdHhuIFNlbmRlcgpnbG9iYWwgQ3JlYXRvckFkZHJlc3MKPT0KLy8gdW5hdXRob3JpemVkCmFzc2VydApieXRlY18wIC8vICJ0b3RhbCIKYnl0ZWNfMCAvLyAidG90YWwiCmFwcF9nbG9iYWxfZ2V0CmZyYW1lX2RpZyAtMQorCmFwcF9nbG9iYWxfcHV0CmJ5dGVjXzAgLy8gInRvdGFsIgphcHBfZ2xvYmFsX2dldApmcmFtZV9idXJ5IDAKcmV0c3ViCgovLyBzdWJ0cmFjdApzdWJ0cmFjdF8xOgpwcm90byAxIDEKaW50Y18wIC8vIDAKdHhuIFNlbmRlcgpnbG9iYWwgQ3JlYXRvckFkZHJlc3MKPT0KLy8gdW5hdXRob3JpemVkCmFzc2VydApieXRlY18wIC8vICJ0b3RhbCIKYnl0ZWNfMCAvLyAidG90YWwiCmFwcF9nbG9iYWxfZ2V0CmZyYW1lX2RpZyAtMQotCmFwcF9nbG9iYWxfcHV0CmJ5dGVjXzAgLy8gInRvdGFsIgphcHBfZ2xvYmFsX2dldApmcmFtZV9idXJ5IDAKcmV0c3ViCgovLyBtdWx0aXBseQptdWx0aXBseV8yOgpwcm90byAxIDEKaW50Y18wIC8vIDAKYnl0ZWNfMCAvLyAidG90YWwiCmJ5dGVjXzAgLy8gInRvdGFsIgphcHBfZ2xvYmFsX2dldApmcmFtZV9kaWcgLTEKKgphcHBfZ2xvYmFsX3B1dApieXRlY18wIC8vICJ0b3RhbCIKYXBwX2dsb2JhbF9nZXQKZnJhbWVfYnVyeSAwCnJldHN1YgoKLy8gZGl2aWRlCmRpdmlkZV8zOgpwcm90byAxIDEKaW50Y18wIC8vIDAKYnl0ZWNfMCAvLyAidG90YWwiCmJ5dGVjXzAgLy8gInRvdGFsIgphcHBfZ2xvYmFsX2dldApmcmFtZV9kaWcgLTEKLwphcHBfZ2xvYmFsX3B1dApieXRlY18wIC8vICJ0b3RhbCIKYXBwX2dsb2JhbF9nZXQKZnJhbWVfYnVyeSAwCnJldHN1YgoKLy8gYWRkX2Nhc3RlcgphZGRjYXN0ZXJfNDoKcHJvdG8gMCAwCmludGNfMCAvLyAwCmR1cAp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmJ0b2kKZnJhbWVfYnVyeSAxCmZyYW1lX2RpZyAxCmNhbGxzdWIgYWRkXzAKZnJhbWVfYnVyeSAwCmJ5dGVjXzEgLy8gMHgxNTFmN2M3NQpmcmFtZV9kaWcgMAppdG9iCmNvbmNhdApsb2cKcmV0c3ViCgovLyBzdWJ0cmFjdF9jYXN0ZXIKc3VidHJhY3RjYXN0ZXJfNToKcHJvdG8gMCAwCmludGNfMCAvLyAwCmR1cAp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmJ0b2kKZnJhbWVfYnVyeSAxCmZyYW1lX2RpZyAxCmNhbGxzdWIgc3VidHJhY3RfMQpmcmFtZV9idXJ5IDAKYnl0ZWNfMSAvLyAweDE1MWY3Yzc1CmZyYW1lX2RpZyAwCml0b2IKY29uY2F0CmxvZwpyZXRzdWIKCi8vIG11bHRpcGx5X2Nhc3RlcgptdWx0aXBseWNhc3Rlcl82Ogpwcm90byAwIDAKaW50Y18wIC8vIDAKZHVwCnR4bmEgQXBwbGljYXRpb25BcmdzIDEKYnRvaQpmcmFtZV9idXJ5IDEKZnJhbWVfZGlnIDEKY2FsbHN1YiBtdWx0aXBseV8yCmZyYW1lX2J1cnkgMApieXRlY18xIC8vIDB4MTUxZjdjNzUKZnJhbWVfZGlnIDAKaXRvYgpjb25jYXQKbG9nCnJldHN1YgoKLy8gZGl2aWRlX2Nhc3RlcgpkaXZpZGVjYXN0ZXJfNzoKcHJvdG8gMCAwCmludGNfMCAvLyAwCmR1cAp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmJ0b2kKZnJhbWVfYnVyeSAxCmZyYW1lX2RpZyAxCmNhbGxzdWIgZGl2aWRlXzMKZnJhbWVfYnVyeSAwCmJ5dGVjXzEgLy8gMHgxNTFmN2M3NQpmcmFtZV9kaWcgMAppdG9iCmNvbmNhdApsb2cKcmV0c3Vi",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
+    },
+    "state": {
+        "global": {
+            "num_byte_slices": 0,
+            "num_uints": 1
+        },
+        "local": {
+            "num_byte_slices": 0,
+            "num_uints": 0
+        }
+    },
+    "schema": {
+        "global": {
+            "declared": {
+                "total": {
+                    "type": "uint64",
+                    "key": "total",
+                    "descr": "A calculator that stores application state"
+                }
+            },
+            "reserved": {}
+        },
+        "local": {
+            "declared": {},
+            "reserved": {}
+        }
+    },
+    "contract": {
+        "name": "CalculatorApp",
+        "methods": [
+            {
+                "name": "add",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "number"
+                    }
+                ],
+                "returns": {
+                    "type": "uint64"
+                },
+                "desc": "add value to the total"
+            },
+            {
+                "name": "subtract",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "number"
+                    }
+                ],
+                "returns": {
+                    "type": "uint64"
+                },
+                "desc": "subtract value from the total"
+            },
+            {
+                "name": "multiply",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "number"
+                    }
+                ],
+                "returns": {
+                    "type": "uint64"
+                },
+                "desc": "Multiply total with a number, return the result"
+            },
+            {
+                "name": "divide",
+                "args": [
+                    {
+                        "type": "uint64",
+                        "name": "number"
+                    }
+                ],
+                "returns": {
+                    "type": "uint64"
+                },
+                "desc": "Divide total with a number, return the result"
+            }
+        ],
+        "networks": {}
+    },
+    "bare_call_config": {
+        "no_op": "CREATE"
+    }
+}

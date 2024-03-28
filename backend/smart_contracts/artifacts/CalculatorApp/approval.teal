@@ -1,0 +1,227 @@
+#pragma version 8
+intcblock 0 1
+bytecblock 0x746f74616c 0x151f7c75
+txn NumAppArgs
+intc_0 // 0
+==
+bnz main_l10
+txna ApplicationArgs 0
+pushbytes 0xff9a73d6 // "add(uint64)uint64"
+==
+bnz main_l9
+txna ApplicationArgs 0
+pushbytes 0x3c413400 // "subtract(uint64)uint64"
+==
+bnz main_l8
+txna ApplicationArgs 0
+pushbytes 0x08f1b064 // "multiply(uint64)uint64"
+==
+bnz main_l7
+txna ApplicationArgs 0
+pushbytes 0x8dec4436 // "divide(uint64)uint64"
+==
+bnz main_l6
+err
+main_l6:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub dividecaster_7
+intc_1 // 1
+return
+main_l7:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub multiplycaster_6
+intc_1 // 1
+return
+main_l8:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub subtractcaster_5
+intc_1 // 1
+return
+main_l9:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub addcaster_4
+intc_1 // 1
+return
+main_l10:
+txn OnCompletion
+intc_0 // NoOp
+==
+bnz main_l12
+err
+main_l12:
+txn ApplicationID
+intc_0 // 0
+==
+assert
+intc_1 // 1
+return
+
+// add
+add_0:
+proto 1 1
+intc_0 // 0
+txn Sender
+global CreatorAddress
+==
+// unauthorized
+assert
+bytec_0 // "total"
+bytec_0 // "total"
+app_global_get
+frame_dig -1
++
+app_global_put
+bytec_0 // "total"
+app_global_get
+frame_bury 0
+retsub
+
+// subtract
+subtract_1:
+proto 1 1
+intc_0 // 0
+txn Sender
+global CreatorAddress
+==
+// unauthorized
+assert
+bytec_0 // "total"
+bytec_0 // "total"
+app_global_get
+frame_dig -1
+-
+app_global_put
+bytec_0 // "total"
+app_global_get
+frame_bury 0
+retsub
+
+// multiply
+multiply_2:
+proto 1 1
+intc_0 // 0
+bytec_0 // "total"
+bytec_0 // "total"
+app_global_get
+frame_dig -1
+*
+app_global_put
+bytec_0 // "total"
+app_global_get
+frame_bury 0
+retsub
+
+// divide
+divide_3:
+proto 1 1
+intc_0 // 0
+bytec_0 // "total"
+bytec_0 // "total"
+app_global_get
+frame_dig -1
+/
+app_global_put
+bytec_0 // "total"
+app_global_get
+frame_bury 0
+retsub
+
+// add_caster
+addcaster_4:
+proto 0 0
+intc_0 // 0
+dup
+txna ApplicationArgs 1
+btoi
+frame_bury 1
+frame_dig 1
+callsub add_0
+frame_bury 0
+bytec_1 // 0x151f7c75
+frame_dig 0
+itob
+concat
+log
+retsub
+
+// subtract_caster
+subtractcaster_5:
+proto 0 0
+intc_0 // 0
+dup
+txna ApplicationArgs 1
+btoi
+frame_bury 1
+frame_dig 1
+callsub subtract_1
+frame_bury 0
+bytec_1 // 0x151f7c75
+frame_dig 0
+itob
+concat
+log
+retsub
+
+// multiply_caster
+multiplycaster_6:
+proto 0 0
+intc_0 // 0
+dup
+txna ApplicationArgs 1
+btoi
+frame_bury 1
+frame_dig 1
+callsub multiply_2
+frame_bury 0
+bytec_1 // 0x151f7c75
+frame_dig 0
+itob
+concat
+log
+retsub
+
+// divide_caster
+dividecaster_7:
+proto 0 0
+intc_0 // 0
+dup
+txna ApplicationArgs 1
+btoi
+frame_bury 1
+frame_dig 1
+callsub divide_3
+frame_bury 0
+bytec_1 // 0x151f7c75
+frame_dig 0
+itob
+concat
+log
+retsub
